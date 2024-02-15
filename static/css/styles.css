@@ -61,7 +61,14 @@ a.btn:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: fit-content;
 }
-
+.page-link{
+        color: #fff;
+    background-color: #007bff;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
 .step-links {
     display: flex;
     gap: 10px;

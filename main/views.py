@@ -114,31 +114,3 @@ def delete_file(request, id):
     else:
         return redirect('login')
 
-def get_file_icon(file_path):
-    file_icons = {
-        'pdf': 'fa-file-pdf',
-        'docx': 'fa-file-word',
-        'doc': 'fa-file-word',
-        'ppt': 'fa-file-powerpoint',
-        'pptx': 'fa-file-powerpoint',
-        'xls': 'fa-file-excel',
-        'xlsx': 'fa-file-excel',
-        'txt': 'fa-file-alt',
-        'mp3': 'fa-file-audio',
-        'mp4': 'fa-file-video',
-        'jpg': 'fa-file-image',
-        'jpeg': 'fa-file-image',
-        'png': 'fa-file-image',
-        'gif': 'fa-file-image',
-        'csv': 'fa-file-csv',
-        'zip': 'fa-file-archive',
-        'rar': 'fa-file-archive',
-        '7z': 'fa-file-archive',
-        'html': 'fa-file-code',
-        'js': 'fa-file-code',
-        'css': 'fa-file-code',
-        'json': 'fa-file-code',
-        # Добавьте другие типы файлов и их иконки по необходимости
-    }
-    extension = file_path.split('.')[-1].lower()  # Получаем расширение файла
-    return file_icons.get(extension, 'fa-file')  # Возвращаем класс иконки или стандартный, если не найден
