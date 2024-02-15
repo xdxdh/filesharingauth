@@ -43,16 +43,3 @@ class File(models.Model):
     file = models.FileField(upload_to='uploads/')
     # Другие поля по необходимости
 
-    def get_icon_class(self):
-        extension = self.file.name.split('.')[-1].lower()
-        if extension in ['pdf']:
-            return 'fas fa-file-pdf'
-        elif extension in ['doc', 'docx']:
-            return 'fas fa-file-word'
-        elif extension in ['jpg', 'jpeg', 'png', 'gif']:
-            return 'fas fa-file-image'
-        elif extension in ['mp4', 'avi']:
-            return 'fas fa-file-video'
-        # Добавьте другие условия для разных типов файлов
-        else:
-            return 'fas fa-file'
