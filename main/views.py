@@ -6,6 +6,8 @@ from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 
 def index(request):
+    if 'user' not in request.session:
+        return redirect('login')  # Перенаправление неавторизованных пользователей на страницу входа
     all_files = File_Upload.objects.all().order_by('-id')
     paginator = Paginator(all_files, 5)
 
@@ -13,7 +15,6 @@ def index(request):
     page_obj = paginator.get_page(page_number)
 
     return render(request, 'index.html', {'page_obj': page_obj})
-
 def login(request):
     if 'user' not in request.session:
         if request.method == 'POST':
