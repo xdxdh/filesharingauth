@@ -15,6 +15,13 @@ def index(request):
     page_obj = paginator.get_page(page_number)
 
     return render(request, 'index.html', {'page_obj': page_obj})
+def search(request):
+    query = request.GET.get('query', '')
+    if query:
+        results = File_Upload.objects.filter(title__icontains=query)
+    else:
+        results = File_Upload.objects.none()
+    return render(request, 'search_results.html', {'results': results})
 def login(request):
     if 'user' not in request.session:
         if request.method == 'POST':

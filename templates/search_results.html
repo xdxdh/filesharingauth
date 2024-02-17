@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Результаты поиска{% endblock %}
+
+{% block body %}
+<div class="container mt-4">
+<center>
+    <h2 style=" font-size:50px; color:#000000; font-weight: normal">Результаты поиска</h2></center>
+    {% if results %}
+        <div class="row">
+            {% for file in results %}
+        <div class="container border border-success my-5 py-4 form-control">
+            <h1 class="mx-5">{{ file.title }}</h1>
+            <small><p class="mx-5 text-primary">Загрузил: <i>{{ file.user.name }}</i></p></small>
+            <p class="mx-5">{{ file.description }}</p>
+            <p class="mx-5">Категория: {% if file.category %}{{ file.category.name }}{% else %}Не указана{% endif %}</p>
+            <div class="mx-5 file-info">
+                <!-- Отображаем изображение файла -->
+                <img src="{{ file.get_icon_path }}" alt="File Icon" height="30">
+
+                <!-- Показываем название и формат файла -->
+                <a class="btn btn-outline-success btn-sm" href="{{ file.file_field.url }}" target="_blank">{{ file.file_field.name }}</a>
+                <a class="btn btn-outline-success btn-sm" href="{{ file.file_field.url }}" download>Скачать</a>
+            </div>
+        </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>По вашему запросу ничего не найдено.</p>
+    {% endif %}
+</div>
+{% endblock %}
