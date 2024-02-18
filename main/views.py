@@ -5,16 +5,21 @@ from django.http import HttpResponseForbidden
 from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
 
+
 def index(request):
-    if 'user' not in request.session:
-        return redirect('login')  # Перенаправление неавторизованных пользователей на страницу входа
-    all_files = File_Upload.objects.all().order_by('-id')
-    paginator = Paginator(all_files, 5)
+    query = request.GET.get('query', '')
+    category_id = request.GET.get('category', '')
+    files = File_Upload.objects.all().order_by('-id')
 
-    page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)
+    if query:
+        files = files.filter(title__icontains=query)
 
-    return render(request, 'index.html', {'page_obj': page_obj})
+    if category_id:
+        files = files.filter(category__id=category_id)
+
+    categories = Category.objects.all()
+
+    return render(request, 'index.html', {'page_obj': files, 'categories': categories})
 def search(request):
     query = request.GET.get('query', '')
     if query:
