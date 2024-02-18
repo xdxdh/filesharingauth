@@ -7,6 +7,7 @@ from django.core.paginator import Paginator
 
 
 def index(request):
+
     query = request.GET.get('query', '')
     category_id = request.GET.get('category', '')
     files_list = File_Upload.objects.all().order_by('-id')

@@ -61,33 +61,41 @@
     </div>
   </footer>
 <script>
-function toggleBackground() {
-  var body = document.body;
-  var toggleCircle = document.querySelector('.toggle-circle');
-
-  // Проверяем текущее положение кружка
-  if (toggleCircle.classList.contains('toggle-left')) {
-    // Перемещаем кружок вправо и изменяем цвет фона на синий
-    toggleCircle.classList.remove('toggle-left');
-    toggleCircle.classList.add('toggle-right');
-    body.classList.remove('bg-white');
-    body.classList.add('bg-primary');
-    toggleCircle.style.backgroundColor = "#007bff"; // Синий цвет кружка
-
-    // Обновляем логотип для синего фона
-    document.querySelector('img').src = '{% static "images/white.png" %}';
-  } else {
-    // Возвращаем кружок влево и изменяем цвет фона на белый
-    toggleCircle.classList.remove('toggle-right');
-    toggleCircle.classList.add('toggle-left');
-    body.classList.add('bg-white');
-    body.classList.remove('bg-primary');
-    toggleCircle.style.backgroundColor = "#ffffff"; // Белый цвет кружка
-
-    // Обновляем логотип для белого фона
-    document.querySelector('img').src = '{% static "images/blue.png" %}';
-  }
+function saveState(isPrimary) {
+    localStorage.setItem('isPrimaryBackground', isPrimary);
 }
+
+// Загружаем сохраненное состояние фона
+function loadState() {
+    const isPrimary = localStorage.getItem('isPrimaryBackground') === 'true';
+    updateBackgroundAndLogo(isPrimary);
+}
+
+// Обновляем фон и логотип в соответствии с состоянием
+function updateBackgroundAndLogo(isPrimary) {
+    const body = document.body;
+    const toggleCircle = document.querySelector('.toggle-circle'); // Получаем элемент кружка
+    const imgSrc = isPrimary ? '{% static "images/white.png" %}' : '{% static "images/blue.png" %}';
+    const bgColorClassToAdd = isPrimary ? 'bg-primary' : 'bg-white';
+    const bgColorClassToRemove = isPrimary ? 'bg-white' : 'bg-primary';
+    const circleColor = isPrimary ? "#007bff" : "#ffffff"; // Синий для синего фона, белый для белого фона
+    
+    body.classList.add(bgColorClassToAdd);
+    body.classList.remove(bgColorClassToRemove);
+    document.querySelector('img').src = imgSrc;
+     toggleCircle.style.backgroundColor = circleColor;
+    // Сохраняем состояние после обновления
+    saveState(isPrimary);
+}
+
+// Переключаем фон и логотип
+function toggleBackground() {
+    const isPrimary = !document.body.classList.contains('bg-primary');
+    updateBackgroundAndLogo(isPrimary);
+}
+
+// Вызываем loadState при загрузке страницы
+document.addEventListener('DOMContentLoaded', loadState);
 </script> <!-- Это же ДЖАВАСКРИИИИПТ!!!! -->
 
   <!-- Bootstrap JS -->
