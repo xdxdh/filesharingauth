@@ -4,9 +4,13 @@ from django.contrib import messages
 from django.http import HttpResponseForbidden
 from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
-
+from django.contrib.auth import update_session_auth_hash
 
 def index(request):
+    # Проверяем, установлена ли сессия для пользователя
+    if 'user' not in request.session:
+        # Если сессия не установлена, перенаправляем на страницу входа
+        return redirect('login')
 
     query = request.GET.get('query', '')
     category_id = request.GET.get('category', '')
@@ -19,7 +23,7 @@ def index(request):
         files_list = files_list.filter(category__id=category_id)
 
     # Пагинация
-    paginator = Paginator(files_list, 5) # Показывать по 5 файлов на странице
+    paginator = Paginator(files_list, 5)  # Показывать по 5 файлов на странице
     page_number = request.GET.get('page')
     page_obj = paginator.get_page(page_number)
 
