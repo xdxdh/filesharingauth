@@ -10,4 +10,4 @@ urlpatterns = [
     path("file_upload/", views.file_upload, name="file_upload"),
     path('search/', views.search, name='search'),
     path('delete/<str:id>/', views.delete_file, name="delete_file")
-]
+]#

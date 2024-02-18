@@ -18,7 +18,7 @@ def index(request):
         files = files.filter(category__id=category_id)
 
     categories = Category.objects.all()
-
+    < !---->
     return render(request, 'index.html', {'page_obj': files, 'categories': categories})
 def search(request):
     query = request.GET.get('query', '')

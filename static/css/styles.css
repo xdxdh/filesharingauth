@@ -16,7 +16,7 @@ body, .main-section {
 .navbar-custom{
     background-color: #294a70 !important;
     color: #FFFFFF;
-}
+}<!---->
 /* Дополнительные стили для формы поиска, если требуется */
 .form-inline .form-control {
     margin-bottom: 10px; /* Добавляет отступы между полями и кнопкой */
