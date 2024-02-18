@@ -29,9 +29,12 @@ class File_Upload(models.Model):
         file_extension = self.file_field.name.split('.')[-1].lower()
         file_icons = {
             'pdf': 'images/icons/pdf.png',
+            'doc': 'images/icons/docx.png',
             'docx': 'images/icons/docx.png',
-            'xls': 'images/icons/xls.png',
             'pptx': 'images/icons/pptx.png',
+            'ppt': 'images/icons/pptx.png',
+            'xlsx': 'images/icons/xlsx.png',
+            'xls': 'images/icons/xlsx.png',
             # Добавьте другие расширения и пути к их изображениям по необходимости
         }
         return static(file_icons.get(file_extension, 'images/icons/default.png'))

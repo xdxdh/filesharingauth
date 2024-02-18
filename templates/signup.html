@@ -6,7 +6,7 @@
 
 {% block body %}
     <div class="container w-25 my-5">
-        <h2 class="my-5">Создайте свою учетную запись</h2>
+        <h2 class="my-5 text-dark" style="text-align: center">Создайте свою учетную запись</h2>
         <hr>
         {% if messages %}
             {% for message in messages %}
@@ -38,8 +38,8 @@
                 <input type="submit" class="btn btn-danger w-100" value="Зарегистрироваться">
             </div>
         </form>
-        <center>
-            Уже есть учетная запись? <a href="{% url 'login' %}" class="text-light">Войти</a>
+        <center class="text-dark">
+            Уже есть учетная запись? <a href="{% url 'login' %}" class="text-dark">Войти</a>
         </center>
     </div>
 {% endblock %}

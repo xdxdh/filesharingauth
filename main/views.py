@@ -2,23 +2,28 @@ from django.shortcuts import render, redirect
 from .models import User, File_Upload, Category
 from django.contrib import messages
 from django.http import HttpResponseForbidden
-from django.core.paginator import Paginator
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator
 
 
 def index(request):
     query = request.GET.get('query', '')
     category_id = request.GET.get('category', '')
-    files = File_Upload.objects.all().order_by('-id')
+    files_list = File_Upload.objects.all().order_by('-id')
 
     if query:
-        files = files.filter(title__icontains=query)
+        files_list = files_list.filter(title__icontains=query)
 
     if category_id:
-        files = files.filter(category__id=category_id)
+        files_list = files_list.filter(category__id=category_id)
+
+    # Пагинация
+    paginator = Paginator(files_list, 5) # Показывать по 5 файлов на странице
+    page_number = request.GET.get('page')
+    page_obj = paginator.get_page(page_number)
 
     categories = Category.objects.all()
-    return render(request, 'index.html', {'page_obj': files, 'categories': categories})
+    return render(request, 'index.html', {'page_obj': page_obj, 'categories': categories})
 def search(request):
     query = request.GET.get('query', '')
     if query:
