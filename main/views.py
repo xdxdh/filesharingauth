@@ -97,37 +97,6 @@ def file_upload(request):
 
     categories = Category.objects.all()
     return render(request, 'file_upload.html', {'categories': categories})
-
-def settings(request):
-    if 'user' in request.session:
-        user_obj = User.objects.get(email=request.session['user'])
-        user_files = File_Upload.objects.filter(user=user_obj)
-
-        img_list, audio_list, videos_list, pdfs_list = [], [], [], []
-
-        for file in user_files:
-            if str(file.file_field)[-3:] == 'mp3':
-                audio_list.append(file)
-            elif str(file.file_field)[-3:] in ['mp4', 'mkv']:
-                videos_list.append(file)
-            elif str(file.file_field)[-3:] in ['jpg', 'png', 'jpeg']:
-                img_list.append(file)
-            elif str(file.file_field)[-3:] == 'pdf':
-                pdfs_list.append(file)
-
-        data = {
-            'user_files': user_files,
-            'videos': len(videos_list),
-            'audios': len(audio_list),
-            'images': len(img_list),
-            'pdf': len(pdfs_list),
-            'img_list': img_list,
-            'audio_list': audio_list,
-            'videos_list': videos_list,
-            'pdfs_list': pdfs_list
-        }
-        return render(request, 'settings.html', data)
-
 def delete_file(request, id):
     if 'user' in request.session:
         file_obj = File_Upload.objects.get(id=id)
