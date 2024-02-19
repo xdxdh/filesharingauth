@@ -104,4 +104,6 @@ def delete_file(request, id):
         return redirect('settings')
     else:
         return redirect('login')
+def test(request):
+    return render(request, 'test.html')
 

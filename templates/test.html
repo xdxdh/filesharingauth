@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated Gradient Background</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #0e0e10; /* Тёмный фон */
+    }
+
+    /* Градиентный фон */
+    .background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #2e14d7, #02eaff);
+      z-index: 0;
+    }
+
+    /* Анимированные линии */
+    .line {
+      position: absolute;
+      height: 2px; /* Толщина линии */
+      background: white; /* Цвет линии */
+      opacity: 1; /* Начальная прозрачность */
+      z-index: 1;
+      animation: animateLine 1s linear forwards; /* Увеличенное время анимации */
+    }
+
+    /* Анимация для линий */
+    @keyframes animateLine {
+      0% {
+        width: 0;
+        opacity: 1;
+      }
+      100% {
+        width: 100px; /* Линия достигает полной длины */
+        opacity: 0; /* Линия постепенно становится прозрачной */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <script>
+    // Функция для создания линий
+    function createLine() {
+      const line = document.createElement('div');
+      line.classList.add('line');
+      line.style.width = '2px'; // Толщина линии
+      // Случайные начальные позиции для линии
+      line.style.top = Math.random() * window.innerHeight + 'px';
+      line.style.left = Math.random() * window.innerWidth + 'px';
+
+      // Устанавливаем
+    // случайный угол наклона линии
+      line.style.transform = 'rotate(' + (1 * 45) + 'deg)';
+
+      // Добавляем линию на страницу
+      document.body.appendChild(line);
+
+      // Удаляем линию после того, как анимация закончится
+      line.addEventListener('animationend', function() {
+        document.body.removeChild(line);
+      });
+    }
+
+    // Функция для создания линий через регулярные интервалы времени
+    function initLines() {
+      const interval = 100; // Интервал создания линий установлен в 2000 мс (2 секунды)
+      setInterval(createLine, interval);
+    }
+
+    // Инициализация анимации после загрузки страницы
+    document.addEventListener('DOMContentLoaded', initLines);
+  </script>
+</body>
+</html>
