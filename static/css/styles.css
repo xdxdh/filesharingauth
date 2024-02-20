@@ -27,7 +27,7 @@ body, .main-section {
 .toggle-container.blue .toggle-circle {
   left: auto;
   right: 2.5px; /* Переместить кружок вправо */
-  background-color: #fff; /* Белый цвет кружка */
+  background-color: #007bff; /* Белый цвет кружка */
 }
 .toggle-circle {
   position: absolute;

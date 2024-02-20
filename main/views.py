@@ -46,7 +46,7 @@ def login(request):
                 request.session["user"] = email
                 return redirect('index')
             else:
-                messages.warning(request, "Wrong user or details.")
+                messages.warning(request, "Неверный E-Mail или пароль!")
         return render(request, 'login.html')
     else:
         return redirect('index')
@@ -64,10 +64,10 @@ def signup(request):
         if not User.objects.filter(email=email).exists():
             create_user = User.objects.create(name=name, email=email, pwd=pwd, gender=gender)
             create_user.save()
-            messages.success(request, "Your account is created successfully!")
+            messages.success(request, "Ваш аккаунт успешно создан! Войдите в него!")
             return redirect('login')
         else:
-            messages.warning(request, "Email is already registered!")
+            messages.warning(request, "E-Mail уже зарегистрирован!")
     return render(request, 'signup.html')
 
 @login_required
