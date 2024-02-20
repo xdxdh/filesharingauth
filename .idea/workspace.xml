@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2dfec95f-2f6a-4692-9b02-3eaf5a28386d" name="Changes" comment="SAVE 20.02.21:05" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Pavel &lt;mebao123@mail.ru&gt;" />
+      </list>
+    </option>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="design" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2cNyuNe5NLogGnkO0UiwI1JUGlH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "Django Server.filesharingauth.executor": "Run",
+    "RunOnceActivity.OpenDjangoStructureViewOnStart": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "django.template.preview.state": "SHOW_EDITOR",
+    "git-widget-placeholder": "eec6ce5e",
+    "last_opened_file_path": "C:/Users/mebao/PycharmProjects/filesharingauth-master",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\mebao\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dfec95f-2f6a-4692-9b02-3eaf5a28386d" name="Changes" comment="" />
+      <created>1707966552885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1707966552885</updated>
+      <workItem from="1707966553983" duration="579000" />
+      <workItem from="1708017535539" duration="4740000" />
+      <workItem from="1708026559154" duration="343000" />
+      <workItem from="1708198405290" duration="30000" />
+      <workItem from="1708208340274" duration="1850000" />
+      <workItem from="1708210320136" duration="333000" />
+      <workItem from="1708210666236" duration="4137000" />
+      <workItem from="1708217383050" duration="885000" />
+      <workItem from="1708219882606" duration="3966000" />
+      <workItem from="1708224054465" duration="118000" />
+      <workItem from="1708224183323" duration="36804000" />
+      <workItem from="1708456270929" duration="304000" />
+    </task>
+    <task id="LOCAL-00001" summary="Добавлены иконки типов файлов (100%)">
+      <option name="closed" value="true" />
+      <created>1707967071193</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707967071193</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Авторизация с сессией работают&#10;Добавлены иконки&#10;Изменены чуток стиил">
+      <option name="closed" value="true" />
+      <created>1708209316388</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708209316388</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Добавлена проверка сессии">
+      <option name="closed" value="true" />
+      <created>1708209576971</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708209576971</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Добавлен поиск файлов при любом совпадении в названии">
+      <option name="closed" value="true" />
+      <created>1708210809351</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708210809351</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Изменено расположение кнопки поиск и остальных кнопок">
+      <option name="closed" value="true" />
+      <created>1708216827588</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708216827588</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Изменено расположение кнопки поиск и остальных кнопок">
+      <option name="closed" value="true" />
+      <created>1708217972669</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708217972669</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Добавлено 2 логотипа,изменение на новый логотип&#10;Исправление запуска :)">
+      <option name="closed" value="true" />
+      <created>1708220140081</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708220140081</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Добавление парочки файлов.">
+      <option name="closed" value="true" />
+      <created>1708264194170</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708264194170</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Изменение кнопки смены фона">
+      <option name="closed" value="true" />
+      <created>1708273093618</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708273093618</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Изменение кнопки смены фона">
+      <option name="closed" value="true" />
+      <created>1708276191496</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708276191496</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Добавление проверки сессии + изменение Settings -&gt; Личный кабинет">
+      <option name="closed" value="true" />
+      <created>1708289777056</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708289777056</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Удаление settings.html">
+      <option name="closed" value="true" />
+      <created>1708357791127</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708357791127</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Добавление тестового дизайна">
+      <option name="closed" value="true" />
+      <created>1708371286549</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708371286549</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Фиксы страниц и ошибок">
+      <option name="closed" value="true" />
+      <created>1708452134001</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708452134001</updated>
+    </task>
+    <task id="LOCAL-00015" summary="SAVE 20.02.21:05">
+      <option name="closed" value="true" />
+      <created>1708455967718</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708455967718</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit eec6ce5e">
+      <option name="closed" value="true" />
+      <created>1708456102687</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708456102687</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Revert &quot;Add files via upload&quot;&#10;&#10;This reverts commit f8648db9">
+      <option name="closed" value="true" />
+      <created>1708456183234</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708456183234</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="design" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Добавлены иконки типов файлов (100%)" />
+    <MESSAGE value="Авторизация с сессией работают&#10;Добавлены иконки&#10;Изменены чуток стиил" />
+    <MESSAGE value="Добавлена проверка сессии" />
+    <MESSAGE value="Добавлен поиск файлов при любом совпадении в названии" />
+    <MESSAGE value="Изменено расположение кнопки поиск и остальных кнопок" />
+    <MESSAGE value="Добавлено 2 логотипа,изменение на новый логотип&#10;Исправление запуска :)" />
+    <MESSAGE value="Добавление парочки файлов." />
+    <MESSAGE value="Изменение кнопки смены фона" />
+    <MESSAGE value="Добавление проверки сессии + изменение Settings -&gt; Личный кабинет" />
+    <MESSAGE value="Удаление settings.html" />
+    <MESSAGE value="Добавление тестового дизайна" />
+    <MESSAGE value="Фиксы страниц и ошибок" />
+    <MESSAGE value="SAVE 20.02.21:05" />
+    <MESSAGE value="Revert &quot;Initial commit&quot;&#10;&#10;This reverts commit eec6ce5e" />
+    <MESSAGE value="Revert &quot;Add files via upload&quot;&#10;&#10;This reverts commit f8648db9" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;Add files via upload&quot;&#10;&#10;This reverts commit f8648db9" />
+  </component>
+</project>
